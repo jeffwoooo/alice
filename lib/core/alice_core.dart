@@ -138,8 +138,4 @@ class AliceCore {
     });
     return requestedCall;
   }
-
-  void saveHttpRequests(BuildContext context) {
-    AliceSaveHelper.saveCalls(context, calls);
-  }
 }
