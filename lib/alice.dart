@@ -12,12 +12,11 @@ class Alice {
   AliceCore _core;
   AliceHttpClientAdapter _httpClientAdapter;
   AliceHttpAdapter _httpAdapter;
-  bool showNotification = true;
 
   Alice(
-      {this.showNotification = true, GlobalKey<NavigatorState> navigatorKey}) {
+      {GlobalKey<NavigatorState> navigatorKey}) {
     _navigatorKey = navigatorKey ?? GlobalKey<NavigatorState>();
-    _core = AliceCore(_navigatorKey, showNotification);
+    _core = AliceCore(_navigatorKey);
     _httpClientAdapter = AliceHttpClientAdapter(_core);
     _httpAdapter = AliceHttpAdapter(_core);
   }
